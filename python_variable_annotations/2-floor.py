@@ -8,7 +8,6 @@ as an integer using the math module.
 """
 
 
-
 def floor(n: float) -> int:
     """Return the floor value of a float.
 
