@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import math
+
 """
-Module that provides function floor which takes a float n as argument and returns the floor of the float.
+Module that provides function floor
+which takes a float n as argument and
+returns the floor of the float.
 
 """
 
