@@ -9,7 +9,7 @@ from typing import Union,Tuple
 import math
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, Union[int, float]]:
+def to_kv(k: str, v: float) -> Tuple[str, float]:
     """Return tuple
         Args:
         k [str] : The first argument
