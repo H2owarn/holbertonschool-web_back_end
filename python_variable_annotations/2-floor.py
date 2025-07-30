@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
+"""
+Module that provides a single function, `floor`,
+which takes a float and returns its floor value.
+"""
 
 import math
-
-""" This module provides a single function, `floor`,
-which takes a float and returns its floor value
-as an integer using the math module.
-"""
 
 
 def floor(n: float) -> int:
