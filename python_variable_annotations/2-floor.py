@@ -2,20 +2,21 @@
 import math
 
 """
-Module that provides function floor
-which takes a float n as argument and
-returns the floor of the float.
-
+This module provides a single function, `floor`,
+which takes a float and returns its floor value
+as an integer using the math module.
 """
 
 
+
 def floor(n: float) -> int:
-    """Add one float return int.
+    """Return the floor value of a float.
 
     Args:
-        ans (float): The flaot
+        n (float): The input number.
 
     Returns:
-        int: the floor of the float.
+        int: The largest integer less
+        than or equal to the input.
     """
     return math.floor(n)
