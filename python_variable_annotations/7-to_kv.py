@@ -5,11 +5,11 @@ a tuple. the first is string and
 the second element is the square of the input
 """
 
-from typing import Tuple
+from typing import Tuple, Union
 import math
 
 
-def to_kv(k: str, v: float) -> Tuple[str, float]:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """Return tuple
         Args:
         k [str] : The first argument
