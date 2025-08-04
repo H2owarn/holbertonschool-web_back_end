@@ -9,6 +9,7 @@ import random
 from typing import Generator
 import asyncio
 
+
 async def async_generator() -> Generator[float, None, None]:
     """Return random float number
     Args:
