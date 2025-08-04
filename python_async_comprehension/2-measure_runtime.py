@@ -23,8 +23,7 @@ async def measure_runtime() -> float:
 
 
     # Run async_comprehension four times
-    await asyncio.gather(
-        async_comprehension(),
+    await asyncio.gather(async_comprehension(),
         async_comprehension(),
         async_comprehension(),
         async_comprehension()
