@@ -7,9 +7,9 @@ and yields a random number between 0 and 10
 
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
-async def async_generator() -> AsyncGenerator[float, None]:
+def async_generator() -> Generator[float, None, None]:
     """Return random float number
     Args:
     ()
@@ -17,5 +17,4 @@ async def async_generator() -> AsyncGenerator[float, None]:
     Random [float] between 1 to 10
     """
     for _ in range(10):
-        await asyncio.sleep(1)
         yield random.uniform(1.00, 10.00)
