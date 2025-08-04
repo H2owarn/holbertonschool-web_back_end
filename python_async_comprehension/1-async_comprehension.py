@@ -15,11 +15,8 @@ async_generator = __import__('0-async_generator').async_generator
 
 async def async_comprehension() -> List[float]:
     """Return 10 random number
-    Args:
-    ()
-    Return:
+
     return the 10 random numbers
     over async_generator
     """
-    for _ in range(async_generator):
-        yield random.uniform(0, 10)
+    return [num async for num in async_generator()]
