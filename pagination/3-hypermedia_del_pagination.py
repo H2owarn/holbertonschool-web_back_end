@@ -40,33 +40,35 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-            """"Return paginted data with index-based hypermedia metadata."""
+        """"Return paginted data with index-based hypermedia metadata."""
 
-            assert isinstance(index, int) and 0 <= index < len(self.indexed_dataset())
-            assert isinstance(page_size, int) and page_size > 0
+        assert isinstance(
+            index, int
+            ) and 0 <= index < len(self.indexed_dataset())
+        assert isinstance(page_size, int) and page_size > 0
 
-            dataset = self.dataset()
-            total_items = len(dataset)
+        dataset = self.dataset()
+        total_items = len(dataset)
 
-            # Ensure index is within  bounds
-            if index >= total_items:
-                 return {
-                      "index": index,
-                      "next_index": None,
-                      "page_size": 0,
-                      "data": []
-                 }
-            # slice the dataset
-
-            end_index = index + page_size
-            data = dataset[index:end_index]
-
-            #calculate next index
-            next_index = end_index if end_index < total_items else None
-
+        # Ensure index is within  bounds
+        if index >= total_items:
             return {
-                 "index": index,
-                 "next_index": next_index,
-                 "page_size": len(data),
-                 "data": data
+                "index": index,
+                "next_index": None,
+                "page_size": 0,
+                "data": []
             }
+        # slice the dataset
+
+        end_index = index + page_size
+        data = dataset[index:end_index]
+
+        # calculate next index
+        next_index = end_index if end_index < total_items else None
+
+        return {
+                "index": index,
+                "next_index": next_index,
+                "page_size": len(data),
+                "data": data
+        }
