@@ -8,6 +8,7 @@ import csv
 import math
 from typing import List
 
+
 def index_range(page: int = 1, page_size: int = 10) -> tuple:
     """ Return a tuple
     Args:
@@ -20,8 +21,6 @@ def index_range(page: int = 1, page_size: int = 10) -> tuple:
     start_index = (page - 1) * page_size
     end_index = page * page_size
     return (start_index, end_index)
-
-
 
 class Server:
     """Server class to paginate a database of popular baby names.
