@@ -1,6 +1,5 @@
 // deletes all documents with name="Holberton school" in the collection school
 
-db.school.dalete(
-    {name: "Holberton school"},
-    {multi: true}
+db.school.daleteMany(
+    {name: "Holberton school"}
     )
