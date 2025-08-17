@@ -1,4 +1,6 @@
 // 0-list_databases
 #!/usr/bin/env python3
 
-show dbs
+db.adminCommand('listDatabases').databases.forEach(function(d) {
+    print(d.name + "\t" + (d.sizeOnDisk / (1024 * 1024)).toFixed(3)  + "GB");
+});
