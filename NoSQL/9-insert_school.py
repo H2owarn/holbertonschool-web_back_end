@@ -16,4 +16,4 @@ def  insert_school(mongo_collection, **kwargs):
         new _id
     """
     res = mongo_collection.insert_one(kwargs)
-    return res.insert_id
+    return res.inserted_id
