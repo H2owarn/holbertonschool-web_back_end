@@ -1,0 +1,5 @@
+// All documents
+
+// lists all databases in the collection school
+
+db.school.find().forEach(doc => printjson(doc))
