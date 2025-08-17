@@ -1,5 +1,3 @@
 // deletes all documents with name="Holberton school" in the collection school
 
-printjson(db.school.daleteMany(
-    {name: "Holberton school"}
-    ))
+printjson(db.school.remove({ name: "Holberton school" }))
