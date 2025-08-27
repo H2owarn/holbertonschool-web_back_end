@@ -5,7 +5,7 @@ export default class Airport {
     }
 
     toString() {
-        return `[Object ${this._code}]`;
+        return `[object ${this._code}]`;
     }
 
     [Symbol.for('node.js.util.custom')]() {
