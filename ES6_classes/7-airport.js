@@ -4,6 +4,10 @@ export default class Airport {
         this._code = code;
     }
 
+    toString() {
+        return `[Object ${this._code}]`;
+    }
+
     [Symbol.for('node.js.util.custom')]() {
         return `Airport [${this._code}] { _name: '${this._name}', _code: '${this._code}' }`;
     }
