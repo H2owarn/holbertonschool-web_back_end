@@ -6,7 +6,7 @@ export default function handleProfileSignup() {
         .then(([Photores, Userres]) => {
             const { body } = Photores;
             const { firstName, lastName } = Userres;
-            console.log(`${body}, ${firstName}, ${lastName}`);
+            console.log(`${body} ${firstName} ${lastName}`);
         })
         .catch(error => {
             console.error('failed', error)
