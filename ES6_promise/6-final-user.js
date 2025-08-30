@@ -10,7 +10,7 @@ export default function handleProfileSignup (firstName, lastName, fileName) {
             if (result.status == 'fulfilled') {
             return {
                 status: 'fulfilled',
-                value: results.value,
+                value: result.value,
             };
         }
         return {
