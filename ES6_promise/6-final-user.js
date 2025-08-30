@@ -15,7 +15,7 @@ export default function handleProfileSignup (firstName, lastName, fileName) {
         }
         return {
             status: 'rejected',
-            value: results.reason,
+            value: result.reason,
         };
       });
     });
