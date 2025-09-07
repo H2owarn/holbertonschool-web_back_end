@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 const PORT = 1245;
 
@@ -16,7 +17,7 @@ app.get('/students', (req, res) => {
       res.send(`This is the list of our students\n${output}`);
     })
     .catch((err) => {
-        res.status(500).send('This is the list of our students\nCannot load the database');
+      res.status(500).send('This is the list of our students\nCannot load the database');
     });
 });
 
