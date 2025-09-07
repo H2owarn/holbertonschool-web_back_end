@@ -15,6 +15,9 @@ app.get('/students', (req, res) => {
   countStudents(databasePath)
     .then((output) => {
       res.send(`This is the list of our students\n${output}`);
+    })
+    .catch((err) => {
+        return Promise.reject(new Error('Cannot load the database'));
     });
 });
 
